@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+	--colorprimary: #1c1c1c;
+	--colorsecondary: #fdfaf5;
+	--coloraccent: #ff2449;
+
+	--ff: "Nunito", sans-serif;
+	--line-height: 1.6;
+
+	/* Minor Third Typography*/
+	--h1: bold 2.986rem / 1rem var(--ff);
+	--h2: bold 2.488rem / 1rem var(--ff);
+	--h3: bold 2.074rem / 1rem var(--ff);
+	--h4: bold 1.728rem / 1rem var(--ff);
+	--h5: bold 1.44rem / 1rem var(--ff);
+	--h6: bold 1.2rem / 1rem var(--ff);
+	--p: 1rem / 1rem var(--ff);
+	--small: 0.833rem / 1rem var(--ff);
+}
+
+body {
+	background-color: var(--colorsecondary);
+	color: var(--colorprimary);
+	font: var(--p);
+}
+
+h1 {
+	font: var(--h1);
+}
+
+h2 {
+	font: var(--h2);
+}
+
+h3 {
+	font: var(--h3);
+}
+
+h4 {
+	font: var(--h4);
+}
+
+h5 {
+	font: var(--h5);
+}
+
+h6 {
+	font: var(--h6);
+}
+
+p {
+	font: var(--p);
+	color: var(--colorprimary);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header a {
+	text-decoration: none;
+	color: var(--colorprimary);
+}
+
+.sub-header {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.sub-header-title {
+	color: var(--coloraccent);
+}
+
+.sub-header nav {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	font-weight: 600;
+}
+
+.sub-header-link {
+	font: var(--h5);
+	color: var(--colorprimary);
+	text-decoration: none;
+
+	margin: 10px;
+}
+
+.current-sub-header-link {
+	font: var(--h5);
+	color: var(--colorprimary);
+	text-decoration: underline;
+
+	margin: 10px;
+}

@@ -1,0 +1,9 @@
+.project-description a {
+	text-decoration: none;
+	color: var(--coloraccent);
+}
+
+.project-item {
+	display: flex;
+	justify-content: space-around;
+}
