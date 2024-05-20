@@ -1,9 +1,15 @@
-.project-description a {
-	text-decoration: none;
-	color: var(--coloraccent);
+.project-list {
+	margin-top: 40px;
+	margin-bottom: 10px;
+	width: 100%;
 }
 
-.project-item {
+.project-list-item {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+}
+
+.item-description a {
+	text-decoration: none;
+	color: var(--coloraccent);
 }
