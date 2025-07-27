@@ -1,0 +1,142 @@
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 clamp(1rem, 5vh, 3rem);
+	height: 80px;
+}
+
+nav .left a {
+	color: var(--colorprimary);
+	font-size: 22px;
+	font-weight: 600;
+}
+
+nav .right {
+	display: flex;
+	align-items: center;
+}
+
+nav .right ul {
+	display: flex;
+	list-style: none;
+}
+
+nav .right ul li {
+	margin: 0 1rem;
+}
+
+nav .right ul li a span {
+	color: var(--colorprimary);
+	font-size: 18px;
+}
+
+nav .right .ham-menu {
+	height: 36px;
+	width: 36px;
+	background: none;
+	border: none;
+	position: relative;
+	display: none;
+}
+
+nav .right .ham-menu span {
+	height: 2px;
+	width: 100%;
+	background-color: var(--colorprimary);
+	border-radius: 1px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: 250ms ease;
+}
+
+nav .right .ham-menu span:nth-child(1) {
+	top: 25%;
+}
+
+nav .right .ham-menu span:nth-child(3) {
+	top: 75%;
+}
+
+nav .ham-menu.active span:nth-child(1) {
+	top: 50%;
+	transform: translate(-50%, 0) rotate(225deg);
+	background-color: var(--colorsecondary);
+}
+
+nav .ham-menu.active span:nth-child(2) {
+	opacity: 0;
+}
+
+nav .ham-menu.active span:nth-child(3) {
+	top: 50%;
+	transform: translate(-50%, 0) rotate(135deg);
+	background-color: var(--colorsecondary);
+}
+
+.off-screen-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--colorprimary);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 250ms ease;
+
+	/* visibility: hidden;
+	height: 100vh;
+	width: 80vw;
+	max-width: 300px;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: 250ms ease;
+	pointer-events: none; */
+}
+
+.off-screen-menu.active {
+	opacity: 0.75;
+	visibility: visible;
+	pointer-events: auto;
+
+	/* right: 0;
+	visibility: visible;
+	pointer-events: auto; */
+}
+
+.off-screen-menu ul {
+	list-style: none;
+}
+
+.off-screen-menu ul li {
+	text-align: center;
+	margin: 2rem 0;
+}
+
+.off-screen-menu ul li a {
+	color: var(--colorsecondary);
+	font-size: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+	nav .right ul {
+		display: none;
+	}
+
+	nav .right .ham-menu {
+		display: flex;
+	}
+}
